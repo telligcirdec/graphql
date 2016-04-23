@@ -56,13 +56,13 @@ public class FightDataFetcher {
 
     public DataFetcher fight() {
         return (DataFetchingEnvironment dfe) -> {
-            Long hpId = Long.valueOf(dfe.getArgument("hpId"));
+            Long hpId = Long.valueOf(dfe.getArgument("hpId").toString());
             String swapiId = dfe.getArgument("swapiId");
-            String winner = dfe.getArgument("winner");
+            Boolean winner = dfe.getArgument("winner");
 
             Fight fight = new Fight();
             fight.setWinner(false);
-            if ((winner == null && Math.random() > 0.2) || "Jedi".equals(winner)) {
+            if ((winner == null && Math.random() > 0.2) || Boolean.TRUE.equals(winner)) {
                 fight.setWinner(true);
             }
             HpPeople hpPeople = hpPeopleRepository.findOne(hpId);
