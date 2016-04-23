@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>run</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>spring-boot:run</goal>
+            </goals>
+            <properties>
+                <org.apache.cxf.Logger>org.apache.cxf.common.logging.Slf4jLogger</org.apache.cxf.Logger>
+            </properties>
+        </action>
+        <action>
+            <actionName>debug</actionName>
+            <packagings>
+                <packaging>jar</packaging>
+            </packagings>
+            <goals>
+                <goal>spring-boot:run</goal>
+            </goals>
+            <properties>
+                <run.jvmArguments>-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005</run.jvmArguments>
+                <org.apache.cxf.Logger>org.apache.cxf.common.logging.Slf4jLogger</org.apache.cxf.Logger>
+            </properties>
+        </action>
+        
+    </actions>

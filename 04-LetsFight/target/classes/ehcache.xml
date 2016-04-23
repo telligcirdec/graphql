@@ -1,0 +1,48 @@
+<ehcache 
+	xsi:noNamespaceSchemaLocation="ehcache.xsd" 
+	updateCheck="true" 
+	monitoring="autodetect" 
+	dynamicConfig="true">
+    
+    <diskStore path="java.io.tmpdir"/>
+    
+    <defaultCache eternal="false" maxElementsInMemory="100" 
+                  overflowToDisk="false" />
+    
+    <cache name="filmById"
+           maxElementsInMemory="10000" eternal="false" 
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           overflowToDisk="false" />
+    
+    <cache name="planetById"
+           maxElementsInMemory="10000" eternal="false" 
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           overflowToDisk="false" />
+    
+    <cache name="peopleById"
+           maxElementsInMemory="10000" eternal="false" 
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           overflowToDisk="false" />
+    
+    <cache name="speciesById"
+           maxElementsInMemory="10000" eternal="false" 
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           overflowToDisk="false" />
+    
+     <cache name="starshipById"
+           maxElementsInMemory="10000" eternal="false" 
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           overflowToDisk="false" />
+    
+     <cache name="vehicleById"
+           maxElementsInMemory="10000" eternal="false" 
+           timeToIdleSeconds="300"
+           timeToLiveSeconds="600"
+           overflowToDisk="false" />
+    
+</ehcache>
